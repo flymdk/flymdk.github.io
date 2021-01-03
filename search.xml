@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>ADB</title>
+    <url>/Android/ADB/</url>
+    <content><![CDATA[<h2 id="ADB禁用、删除软件"><a href="#ADB禁用、删除软件" class="headerlink" title="ADB禁用、删除软件"></a>ADB禁用、删除软件</h2><p>手机自带软件无法删除或禁用，比如手机上的自带的音乐和视频软件。</p>
+<p>ADB下载地址： <a href="https://www.lanzous.com/i5ipena">ADB</a></p>
+<ol>
+<li>手机打开USB调试，各个手机都不同，具体的请百度；</li>
+<li>下载并解压ADB.rar文件夹；</li>
+<li>管理员模式运行ADBDriverInstaller.exe并安装驱动；</li>
+<li>管理员模式打开CMD，进入ADB文件夹（cd命令）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># adb常用命令</span><br><span class="line"></span><br><span class="line"># 查看是否有设备插入</span><br><span class="line">adb devices</span><br><span class="line"></span><br><span class="line"># 禁用软件</span><br><span class="line"></span><br><span class="line">.\adb shell pm disable-user &quot;apk包名&quot;</span><br><span class="line"></span><br><span class="line"># 启用软件</span><br><span class="line">.\adb shell pm enable &quot;apk包名&quot;</span><br><span class="line"></span><br><span class="line"># 删除软件</span><br><span class="line">.\adb shell pm uninstall --user 0 &quot;apk包名&quot;</span><br><span class="line"></span><br><span class="line"># 例如：</span><br><span class="line">.\adb shell pm uninstall --user 0 com.miui.video </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>ADB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LED</title>
+    <url>/electron/LED/</url>
+    <content><![CDATA[<p>一直没有纠结LED的压降和驱动电流</p>
+<p>红色的压降为1.82-1.88V，电流5-8mA<br>绿色的压降为1.75-1.82V，电流3-5mA<br>橙色的压降为1.7-1.8V，电流3-5mA<br>兰色的压降为3.1-3.3V，电流8-10mA<br>白色的压降为3-3.2V，电流10-15mA.</p>
+<p>（工作电压-导通压降）/工作电流</p>
+]]></content>
+      <categories>
+        <category>electron</category>
+      </categories>
+      <tags>
+        <tag>LED</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Verilog HDL学习</title>
+    <url>/FPGA/Verilog-HDL%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="整数型表示方法"><a href="#整数型表示方法" class="headerlink" title="整数型表示方法"></a>整数型表示方法</h2><p>(1) 8’hab 表示 8bit 的十六进制数，换算成二进制是 1010_1011；<br>(2) 8’d171 表示 8bit 的十进制数，换算成二进制是 1010_1011；<br>(3) 8’o253 表示 8bit 的八进制数，换算成二进制是 1010_1011；<br>(4) 8’b1010_1011 表示 8bit 的二进制数，二进制就是 1010_1011。</p>
+]]></content>
+      <categories>
+        <category>FPGA</category>
+      </categories>
+      <tags>
+        <tag>Verilog HDL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ffmpeg转码</title>
+    <url>/ffmpeg/ffmpeg%E8%BD%AC%E7%A0%81/</url>
+    <content><![CDATA[<p>最近抓m3u8文件的ts流，每次抓到的都是几百个ts文件。<br><br>新建filelist.txt，文本内容格式：</p>
+<pre><code>file &#39;1.ts&#39;
+file &#39;2.ts&#39;</code></pre>
+<p>命令行执行：</p>
+<pre><code>$ffmpeg -f concat -i filelist.txt output.mkv</code></pre>
+<p>jpg转成mkv</p>
+<pre><code>$ffmpeg -framerate 30 -i input%03d.jpg -codec copy output.mkv</code></pre>
+]]></content>
+      <categories>
+        <category>ffmpeg</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>python</title>
+    <url>/python/python/</url>
+    <content><![CDATA[<h2 id="树莓派安装pip"><a href="#树莓派安装pip" class="headerlink" title="树莓派安装pip"></a>树莓派安装pip</h2><p>技术不行，无法编译好python3.9,现在用python3.7</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">安装pip3</span><br><span class="line">sudo apt install python3-pip</span><br><span class="line"></span><br><span class="line"># 创建虚拟环境</span><br><span class="line">python3 -m venv venv</span><br><span class="line"></span><br><span class="line"># 激活虚拟环境</span><br><span class="line">source venv&#x2F;bin&#x2F;activate</span><br><span class="line"></span><br><span class="line"># 退出虚拟环境</span><br><span class="line">deactivate</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>blog</title>
+    <url>/blog/%E6%96%B0%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><p>自己的博客网站初步已完成，以后碰到的问题在后期修复！<br><br>博客采用hexo + Next</p>
+<p>更新一下，大半年没有更新了！！！！</p>
+<p>2020.10.18<br><br>今天又发神经又更新了一下，把东西全部移植到树莓派里面来了，以后就用树莓派写博客吧</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>树莓派开箱</title>
+    <url>/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BC%80%E7%AE%B1/</url>
+    <content><![CDATA[<h1 id="食用"><a href="#食用" class="headerlink" title="食用"></a>食用</h1><p>在boot分区添加以下文件</p>
+<ul>
+<li>ssh</li>
+<li>wpa_supplicant.conf</li>
+</ul>
+<blockquote>
+<p>ssh 开启ssh<br>wpa_supplicant.conf设置无线wifi</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">country=CN</span><br><span class="line">ctrl_interface=DIR=<span class="regexp">/var/</span>run/wpa_supplicant GROUP=netdev</span><br><span class="line">update_config=<span class="number">1</span></span><br><span class="line">network=&#123;</span><br><span class="line">    ssid=<span class="string">&quot;你的wifi名&quot;</span></span><br><span class="line">    psk=<span class="string">&quot;你的wifi密码&quot;</span></span><br><span class="line">    key_mgmt=WPA-PSK</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="开机"><a href="#开机" class="headerlink" title="开机"></a>开机</h2><p>树莓派自动连上wifi</p>
+<p>通过ssh登录树莓派<br><br>用户名：pi<br><br>初始密码：raspberry<br></p>
+<h2 id="更改国内软件源"><a href="#更改国内软件源" class="headerlink" title="更改国内软件源"></a>更改国内软件源</h2><ul>
+<li><p>添加root密码</p>
+<pre><code>  sudo passwd root</code></pre>
+</li>
+<li><p>修改用户pi的密码</p>
+<pre><code>  passwd pi</code></pre>
+</li>
+<li><p>修改国内软件源</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">sudo nano &#x2F;etc&#x2F;apt&#x2F;sources.list</span><br><span class="line"># 编辑 &#96;&#x2F;etc&#x2F;apt&#x2F;sources.list&#96; 文件，注释原文件所有内容，用以下内容取代：</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;raspbian&#x2F;raspbian&#x2F; buster main non-free contrib</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;raspbian&#x2F;raspbian&#x2F; buster main non-free contrib</span><br><span class="line"></span><br><span class="line">sudo nano &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;raspi.list</span><br><span class="line"># 编辑 &#96;&#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;raspi.list&#96; 文件，注释原文件所有内容，用以下内容取代：</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;raspberrypi&#x2F; buster main ui</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+<h2 id="设置静态IP"><a href="#设置静态IP" class="headerlink" title="设置静态IP"></a>设置静态IP</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo nano &#x2F;etc&#x2F;dhcpcd.conf</span><br><span class="line"># 在dhcpcd.conf文件最后添加以下内容</span><br><span class="line"># eth0是有线的配置，wlan0是无线配置</span><br><span class="line"># ip_address就是静态IP，后面要接&#x2F;24</span><br><span class="line"># routers是网关</span><br><span class="line"># static domain_name_servers是DNS</span><br><span class="line"></span><br><span class="line">interface eth0</span><br><span class="line"></span><br><span class="line">static ip_address&#x3D;192.168.0.8&#x2F;24</span><br><span class="line">static routers&#x3D;192.168.0.1</span><br><span class="line">static domain_name_servers&#x3D;192.168.0.1 192.168.1.1</span><br><span class="line"></span><br><span class="line">interface wlan0</span><br><span class="line"></span><br><span class="line">static ip_address&#x3D;192.168.0.8&#x2F;24</span><br><span class="line">static routers&#x3D;192.168.0.1</span><br><span class="line">static domain_name_servers&#x3D;192.168.0.1 192.168.1.1</span><br><span class="line"></span><br><span class="line"># 设置后重启 sudo reboot</span><br></pre></td></tr></table></figure>
+<h2 id="开启vnc"><a href="#开启vnc" class="headerlink" title="开启vnc"></a>开启vnc</h2><pre><code>  sudo raspi-config
+  5 Interfacing Options
+  p3 VNC
+  7 Advanced Options
+  # 设置分辨率，不是默认的就行
+  A5 Resulution</code></pre>
+</li>
+</ul>
+<h2 id="设置中文"><a href="#设置中文" class="headerlink" title="设置中文"></a>设置中文</h2><pre><code>    sudo raspi-config
+    4 localisation Options
+    I1 Change Locale
+    Zh_CN.UTF-8     # 空格键选中</code></pre>
+]]></content>
+      <categories>
+        <category>raspberry</category>
+      </categories>
+      <tags>
+        <tag>raspberry</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>树莓派搭建博客</title>
+    <url>/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h2 id="树莓派搭建博客"><a href="#树莓派搭建博客" class="headerlink" title="树莓派搭建博客"></a>树莓派搭建博客</h2><p>采用hexo和next</p>
+<h3 id="nodejs安装"><a href="#nodejs安装" class="headerlink" title="nodejs安装"></a>nodejs安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 下载nodejs</span></span><br><span class="line">wget  https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/v14.14.0/node-v14.14.0-linux-armv7l.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压</span></span><br><span class="line">tar -xzvf node-v14.14.0-linux-armv7l.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重命名</span></span><br><span class="line">mv node-v14.14.0-linux-armv7l.tar.gz nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除软连接</span></span><br><span class="line">sudo rm -rf /usr/<span class="built_in">local</span>/bin/node</span><br><span class="line">sudo rm -rf /usr/<span class="built_in">local</span>/bin/npm</span><br><span class="line">sudo rm -rf /usr/<span class="built_in">local</span>/bin/npx</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加软连接</span></span><br><span class="line">sudo ln -s /home/pi/nodejs/bin/node /usr/<span class="built_in">local</span>/bin/node</span><br><span class="line">sudo ln -s /home/pi/nodejs/bin/npm /usr/<span class="built_in">local</span>/bin/npm</span><br><span class="line">sudo ln -s /home/pi/nodejs/bin/npx /usr/<span class="built_in">local</span>/bin/npx</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置国内源</span></span><br><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br><span class="line">npm install --registry=https://registry.npm.taobao.org</span><br><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+<h3 id="hexo-安装和配置"><a href="#hexo-安装和配置" class="headerlink" title="hexo 安装和配置"></a>hexo 安装和配置</h3><p><a href="https://hexo.io/zh-cn/docs/">hexo官网介绍</a></p>
+<h3 id="next安装"><a href="#next安装" class="headerlink" title="next安装"></a>next安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<h3 id="next配置"><a href="#next配置" class="headerlink" title="next配置"></a>next配置</h3><p><a href="https://theme-next.js.org/docs/">next配置</a></p>
+]]></content>
+      <categories>
+        <category>raspberry</category>
+      </categories>
+      <tags>
+        <tag>raspberry</tag>
+      </tags>
+  </entry>
+</search>
